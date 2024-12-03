@@ -1,3 +1,3 @@
 # WhatsAppClone
 
-![Alt text](./screenshot.jpg)
+![Alt text](screenshot.jpg)
