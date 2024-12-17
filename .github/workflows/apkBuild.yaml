@@ -13,7 +13,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04.6
 
     steps:
       - uses: actions/checkout@v4
@@ -99,15 +99,11 @@ jobs:
             libncurses5-dev \
             libncursesw5-dev \
             cmake \
+            libtinfo5\
             libffi-dev \
             libssl-dev \
             automake
-      - name: Set libtinfo5
-        run: |
-          sudo apt update
-          wget http://security.ubuntu.com/ubuntu/pool/universe/n/ncurses/libtinfo5_6.3-2ubuntu0.1_amd64.deb
-          sudo apt install  libtinfo5_6.3-2ubuntu0.1_amd64
-
+      l
       # Set up Java 17 required by Gradle
       - name: Setup Java 17 required by Gradle
         uses: actions/setup-java@v4
