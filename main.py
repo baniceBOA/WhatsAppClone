@@ -53,8 +53,32 @@ kv = '''
             Line:
                 width:dp(10)
                 ellipse:(self.x+dp(5),self.y+dp(5), self.width-dp(10),self.height-dp(10))
-                
-            
+ 
+<CustomIconTextButton@MDBoxLayout+ButtonBehavior>:
+    text:''
+    icon:''
+    MDBoxLayout:
+        orientation:'vertical'
+        size_hint:(None,None)
+        spacing:'5sp'
+        padding:dp(10)
+        width:dp(105)
+        height:dp(65)
+        canvas.after:
+            Color:
+                rgba:[1,1,1,0.5]
+            Line:
+                width:dp(0.5)
+                rounded_rectangle:(*self.pos, *self.size, dp(15))
+        MDIcon:
+            icon:root.icon
+            font_size:dp(50)
+            theme_text_color:'Custom'
+            text_color:app.theme_cls.primary_dark
+            pos_hint:{'center_x':0.5}
+        MDLabel:
+            text:root.text
+            halign:'center'                                                       
 <UserInfoScreen>:
     MDSliverAppbar:
         background_color:app.theme_cls.primary_color
@@ -90,6 +114,20 @@ kv = '''
                     bold:True
                     halign:'center'
                     pos_hint:{'top':1, 'center_x':0.5}
+                MDBoxLayout:
+                    pos_hint:{'top':0.4, 'center_x':0.5}
+                    spacing:dp(10)
+                    padding:[50, 50,0,50]
+                    size_hint_y:0.3
+                    CustomIconTextButton:
+                        icon:'message-outline'
+                        text:'message'
+                    CustomIconTextButton:
+                        icon:'phone-outline'
+                        text:'call'
+                    CustomIconTextButton:
+                        icon:'video-outline'
+                        text:'video'
                     
         MDSliverAppbarContent:
             id:content
