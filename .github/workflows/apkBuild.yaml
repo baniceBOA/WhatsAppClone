@@ -99,7 +99,7 @@ jobs:
             libncurses5-dev \
             libncursesw5-dev \
             cmake \
-            libtinfo5\
+            libtinfo5 \
             libffi-dev \
             libssl-dev \
             automake
