@@ -23,22 +23,87 @@
 [INFO   ] Window: virtual keyboard not allowed, single mode, not docked
 [INFO   ] Clipboard: Provider: android
 [INFO   ] GL: NPOT texture support is available
-[WARNING] Deprecated property "<StringProperty name=text>" of object "<kivymd.uix.chip.chip.MDChip object at 0x7b992d1390>" was accessed, it will be removed in a future version
-[WARNING] Deprecated property "<ColorProperty name=text_color>" of object "<kivymd.uix.chip.chip.MDChip object at 0x7b992d1390>" was accessed, it will be removed in a future version
-[WARNING] Base: Unknown <android> provider
-[INFO   ] Base: Start application main loop
-[WARNING] Deprecated property "<NumericProperty name=width_mult>" of object "<kivymd.uix.toolbar.toolbar.OverFlowMenu object at 0x7b961db690>" has been set, it will be removed in a future version
-[INFO   ] Loader: using a thread pool of 2 workers
-[ERROR  ] AsyncImage: Not found <img10.jpg>
-[ERROR  ] AsyncImage: Not found <img0.jpg>
-[ERROR  ] AsyncImage: Not found <img4.jpg>
-[ERROR  ] AsyncImage: Not found <img9.jpg>
-[ERROR  ] AsyncImage: Not found <img0.jpg>
-[ERROR  ] AsyncImage: Not found <img0.jpg>
-[ERROR  ] AsyncImage: Not found <img4.jpg>
-[ERROR  ] AsyncImage: Not found <img4.jpg>
-[ERROR  ] AsyncImage: Not found <img9.jpg>
-[ERROR  ] AsyncImage: Not found <img9.jpg>
-[ERROR  ] AsyncImage: Not found <img0.jpg>
-[ERROR  ] AsyncImage: Not found <img4.jpg>
-[INFO   ] Base: Leaving application in progress...
+[WARNING] Deprecated property "<StringProperty name=text>" of object "<kivymd.uix.chip.chip.MDChip object at 0x7b91c50210>" was accessed, it will be removed in a future version
+[WARNING] Deprecated property "<ColorProperty name=text_color>" of object "<kivymd.uix.chip.chip.MDChip object at 0x7b91c50210>" was accessed, it will be removed in a future version
+[WARNING] stderr: Traceback (most recent call last):
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 240, in create_handler
+[WARNING] stderr:     return eval(value, idmap), bound_list
+[WARNING] stderr:            ^^^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "<string>", line 208, in <module>
+[WARNING] stderr: AttributeError: 'ThemeManager' object has no attribute 'secondary_dark'
+[WARNING] stderr: 
+[WARNING] stderr: During handling of the above exception, another exception occurred:
+[WARNING] stderr: 
+[WARNING] stderr: Traceback (most recent call last):
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 694, in _apply_rule
+[WARNING] stderr:     value, bound = create_handler(
+[WARNING] stderr:                    ^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 243, in create_handler
+[WARNING] stderr:     raise BuilderException(rule.ctx, rule.line,
+[WARNING] stderr: kivy.lang.builder.BuilderException: Parser: File "<inline>", line 208:
+[WARNING] stderr: ...
+[WARNING] stderr:     206:                            MDIcon:
+[WARNING] stderr:     207:                                theme_text_color:'Custom'
+[WARNING] stderr: >>  208:                                text_color:app.theme_cls.secondary_dark
+[WARNING] stderr:     209:                                icon:'message-outline'
+[WARNING] stderr:     210:                            MDIcon:
+[WARNING] stderr: ...
+[WARNING] stderr: AttributeError: 'ThemeManager' object has no attribute 'secondary_dark'
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 240, in create_handler
+[WARNING] stderr:     return eval(value, idmap), bound_list
+[WARNING] stderr:            ^^^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "<string>", line 208, in <module>
+[WARNING] stderr: 
+[WARNING] stderr: 
+[WARNING] stderr: During handling of the above exception, another exception occurred:
+[WARNING] stderr: 
+[WARNING] stderr: Traceback (most recent call last):
+[WARNING] stderr:   File "/storage/emulated/0/Download/WhatsAppClone/WhatsAppClone/main.py", line 568, in <module>
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/app.py", line 955, in run
+[WARNING] stderr:     self._run_prepare()
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/app.py", line 925, in _run_prepare
+[WARNING] stderr:     root = self.build()
+[WARNING] stderr:            ^^^^^^^^^^^^
+[WARNING] stderr:   File "/storage/emulated/0/Download/WhatsAppClone/WhatsAppClone/main.py", line 513, in build
+[WARNING] stderr:     'name':'Lilo',
+[WARNING] stderr:            ^^^^^^^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 407, in load_string
+[WARNING] stderr:     self._apply_rule(
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 662, in _apply_rule
+[WARNING] stderr:     self._apply_rule(
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 660, in _apply_rule
+[WARNING] stderr:     child.apply_class_lang_rules(
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/uix/widget.py", line 470, in apply_class_lang_rules
+[WARNING] stderr:     Builder.apply(
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 540, in apply
+[WARNING] stderr:     self._apply_rule(
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 709, in _apply_rule
+[WARNING] stderr:     raise BuilderException(rule.ctx, rule.line,
+[WARNING] stderr: kivy.lang.builder.BuilderException: Parser: File "<inline>", line 208:
+[WARNING] stderr: ...
+[WARNING] stderr:     206:                            MDIcon:
+[WARNING] stderr:     207:                                theme_text_color:'Custom'
+[WARNING] stderr: >>  208:                                text_color:app.theme_cls.secondary_dark
+[WARNING] stderr:     209:                                icon:'message-outline'
+[WARNING] stderr:     210:                            MDIcon:
+[WARNING] stderr: ...
+[WARNING] stderr: BuilderException: Parser: File "<inline>", line 208:
+[WARNING] stderr: ...
+[WARNING] stderr:     206:                            MDIcon:
+[WARNING] stderr:     207:                                theme_text_color:'Custom'
+[WARNING] stderr: >>  208:                                text_color:app.theme_cls.secondary_dark
+[WARNING] stderr:     209:                                icon:'message-outline'
+[WARNING] stderr:     210:                            MDIcon:
+[WARNING] stderr: ...
+[WARNING] stderr: AttributeError: 'ThemeManager' object has no attribute 'secondary_dark'
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 240, in create_handler
+[WARNING] stderr:     return eval(value, idmap), bound_list
+[WARNING] stderr:            ^^^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "<string>", line 208, in <module>
+[WARNING] stderr: 
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 694, in _apply_rule
+[WARNING] stderr:     value, bound = create_handler(
+[WARNING] stderr:                    ^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 243, in create_handler
+[WARNING] stderr:     raise BuilderException(rule.ctx, rule.line,
+[WARNING] stderr: 

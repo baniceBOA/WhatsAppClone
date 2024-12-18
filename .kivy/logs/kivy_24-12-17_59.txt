@@ -23,28 +23,26 @@
 [INFO   ] Window: virtual keyboard not allowed, single mode, not docked
 [INFO   ] Clipboard: Provider: android
 [INFO   ] GL: NPOT texture support is available
-[WARNING] Deprecated property "<StringProperty name=text>" of object "<kivymd.uix.chip.chip.MDChip object at 0x7b9b8e9320>" was accessed, it will be removed in a future version
-[WARNING] Deprecated property "<ColorProperty name=text_color>" of object "<kivymd.uix.chip.chip.MDChip object at 0x7b9b8e9320>" was accessed, it will be removed in a future version
+[WARNING] Deprecated property "<StringProperty name=text>" of object "<kivymd.uix.chip.chip.MDChip object at 0x7b9c9fbe70>" was accessed, it will be removed in a future version
+[WARNING] Deprecated property "<ColorProperty name=text_color>" of object "<kivymd.uix.chip.chip.MDChip object at 0x7b9c9fbe70>" was accessed, it will be removed in a future version
 [WARNING] stderr: Traceback (most recent call last):
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 925, in _build_canvas
-[WARNING] stderr:     setattr(instr, key, value)
-[WARNING] stderr:   File "kivy/graphics/vertex_instructions_line.pxi", line 968, in kivy.graphics.vertex_instructions.Line.ellipse.__set__
-[WARNING] stderr: kivy.graphics.vertex_instructions.GraphicException: Invalid number of arguments: 3 instead of 4, 6 or 7.
+[WARNING] stderr:   File "kivy/properties.pyx", line 961, in kivy.properties.ObservableDict.__getattr__
+[WARNING] stderr: KeyError: '_right_container'
 [WARNING] stderr: 
 [WARNING] stderr: During handling of the above exception, another exception occurred:
 [WARNING] stderr: 
 [WARNING] stderr: Traceback (most recent call last):
-[WARNING] stderr:   File "/storage/emulated/0/Download/WhatsAppClone/WhatsAppClone/main.py", line 467, in <module>
-[WARNING] stderr:     self.root.ids.home.ids.app_bar.title ='WhatsApp' if name_tab.text == 'Chats' else name_tab.text
-[WARNING] stderr:     ^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "/storage/emulated/0/Download/WhatsAppClone/WhatsAppClone/main.py", line 564, in <module>
+[WARNING] stderr:     
+[WARNING] stderr:     ^
 [WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/app.py", line 955, in run
 [WARNING] stderr:     self._run_prepare()
 [WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/app.py", line 925, in _run_prepare
 [WARNING] stderr:     root = self.build()
 [WARNING] stderr:            ^^^^^^^^^^^^
-[WARNING] stderr:   File "/storage/emulated/0/Download/WhatsAppClone/WhatsAppClone/main.py", line 411, in build
-[WARNING] stderr:     class ChatItem(MDRelativeLayout):
-[WARNING] stderr:                    ^^^^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "/storage/emulated/0/Download/WhatsAppClone/WhatsAppClone/main.py", line 509, in build
+[WARNING] stderr:     def on_switch_tabs(*args):
+[WARNING] stderr:                ^^^^^^^^^^^^^^^^
 [WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 407, in load_string
 [WARNING] stderr:     self._apply_rule(
 [WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 662, in _apply_rule
@@ -61,29 +59,11 @@
 [WARNING] stderr:     self._apply_rule(
 [WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 662, in _apply_rule
 [WARNING] stderr:     self._apply_rule(
-[WARNING] stderr:   [Previous line repeated 1 more time]
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 660, in _apply_rule
-[WARNING] stderr:     child.apply_class_lang_rules(
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/uix/widget.py", line 470, in apply_class_lang_rules
-[WARNING] stderr:     Builder.apply(
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 540, in apply
-[WARNING] stderr:     self._apply_rule(
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 662, in _apply_rule
-[WARNING] stderr:     self._apply_rule(
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 603, in _apply_rule
-[WARNING] stderr:     self._build_canvas(widget.canvas.after, widget,
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 928, in _build_canvas
-[WARNING] stderr:     raise BuilderException(
-[WARNING] stderr: kivy.lang.builder.BuilderException: Parser: File "<inline>", line 57:
-[WARNING] stderr: ...
-[WARNING] stderr:      55:            Line:
-[WARNING] stderr:      56:                width:dp(1.5)
-[WARNING] stderr: >>   57:                ellipse:(*self.pos, (self.width*1.5, self.height))
-[WARNING] stderr:      58:        MDIcon:
-[WARNING] stderr:      59:            icon:root.icon
-[WARNING] stderr: ...
-[WARNING] stderr: GraphicException: Invalid number of arguments: 3 instead of 4, 6 or 7.
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 925, in _build_canvas
-[WARNING] stderr:     setattr(instr, key, value)
-[WARNING] stderr:   File "kivy/graphics/vertex_instructions_line.pxi", line 968, in kivy.graphics.vertex_instructions.Line.ellipse.__set__
-[WARNING] stderr: 
+[WARNING] stderr:   [Previous line repeated 2 more times]
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 659, in _apply_rule
+[WARNING] stderr:     widget.add_widget(child)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivymd/uix/list/list.py", line 1211, in add_widget
+[WARNING] stderr:     self.ids._right_container.add_widget(widget)
+[WARNING] stderr:     ^^^^^^^^^^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "kivy/properties.pyx", line 964, in kivy.properties.ObservableDict.__getattr__
+[WARNING] stderr: AttributeError: 'super' object has no attribute '__getattr__'. Did you mean: '__setattr__'?

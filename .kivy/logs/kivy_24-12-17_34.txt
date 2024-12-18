@@ -23,11 +23,11 @@
 [INFO   ] Window: virtual keyboard not allowed, single mode, not docked
 [INFO   ] Clipboard: Provider: android
 [INFO   ] GL: NPOT texture support is available
-[WARNING] Deprecated property "<StringProperty name=text>" of object "<kivymd.uix.chip.chip.MDChip object at 0x7b86218c20>" was accessed, it will be removed in a future version
-[WARNING] Deprecated property "<ColorProperty name=text_color>" of object "<kivymd.uix.chip.chip.MDChip object at 0x7b86218c20>" was accessed, it will be removed in a future version
+[WARNING] Deprecated property "<StringProperty name=text>" of object "<kivymd.uix.chip.chip.MDChip object at 0x7b96319010>" was accessed, it will be removed in a future version
+[WARNING] Deprecated property "<ColorProperty name=text_color>" of object "<kivymd.uix.chip.chip.MDChip object at 0x7b96319010>" was accessed, it will be removed in a future version
 [WARNING] Base: Unknown <android> provider
 [INFO   ] Base: Start application main loop
-[WARNING] Deprecated property "<NumericProperty name=width_mult>" of object "<kivymd.uix.toolbar.toolbar.OverFlowMenu object at 0x7b82f27690>" has been set, it will be removed in a future version
+[WARNING] Deprecated property "<NumericProperty name=width_mult>" of object "<kivymd.uix.toolbar.toolbar.OverFlowMenu object at 0x7b9328f1c0>" has been set, it will be removed in a future version
 [INFO   ] Loader: using a thread pool of 2 workers
 [ERROR  ] AsyncImage: Not found <img10.jpg>
 [ERROR  ] AsyncImage: Not found <img0.jpg>

@@ -22,23 +22,85 @@
 [INFO   ] Window: auto add sdl2 input provider
 [INFO   ] Window: virtual keyboard not allowed, single mode, not docked
 [INFO   ] Clipboard: Provider: android
-[INFO   ] GL: NPOT texture support is available
-[WARNING] Deprecated property "<StringProperty name=text>" of object "<kivymd.uix.chip.chip.MDChip object at 0x7b9224dc50>" was accessed, it will be removed in a future version
-[WARNING] Deprecated property "<ColorProperty name=text_color>" of object "<kivymd.uix.chip.chip.MDChip object at 0x7b9224dc50>" was accessed, it will be removed in a future version
-[WARNING] Base: Unknown <android> provider
-[INFO   ] Base: Start application main loop
-[WARNING] Deprecated property "<NumericProperty name=width_mult>" of object "<kivymd.uix.toolbar.toolbar.OverFlowMenu object at 0x7b8f4b0d00>" has been set, it will be removed in a future version
-[INFO   ] Loader: using a thread pool of 2 workers
-[ERROR  ] AsyncImage: Not found <img10.jpg>
-[ERROR  ] AsyncImage: Not found <img0.jpg>
-[ERROR  ] AsyncImage: Not found <img4.jpg>
-[ERROR  ] AsyncImage: Not found <img9.jpg>
-[ERROR  ] AsyncImage: Not found <img0.jpg>
-[ERROR  ] AsyncImage: Not found <img0.jpg>
-[ERROR  ] AsyncImage: Not found <img4.jpg>
-[ERROR  ] AsyncImage: Not found <img4.jpg>
-[ERROR  ] AsyncImage: Not found <img9.jpg>
-[ERROR  ] AsyncImage: Not found <img9.jpg>
-[ERROR  ] AsyncImage: Not found <img0.jpg>
-[ERROR  ] AsyncImage: Not found <img4.jpg>
-[INFO   ] Base: Leaving application in progress...
+[ERROR  ] 
+Traceback (most recent call last):
+  File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/parser.py", line 553, in execute_directives
+    mod = importlib.__import__(package)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1283, in __import__
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1126, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'kivy.uix.list'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/parser.py", line 556, in execute_directives
+    mod = importlib.__import__(module_name)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1283, in __import__
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'kivy.uix.list'
+[WARNING] stderr: Traceback (most recent call last):
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/parser.py", line 553, in execute_directives
+[WARNING] stderr:     mod = importlib.__import__(package)
+[WARNING] stderr:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "<frozen importlib._bootstrap>", line 1283, in __import__
+[WARNING] stderr:   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+[WARNING] stderr:   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+[WARNING] stderr:   File "<frozen importlib._bootstrap>", line 1126, in _find_and_load_unlocked
+[WARNING] stderr:   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+[WARNING] stderr:   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+[WARNING] stderr:   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+[WARNING] stderr:   File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+[WARNING] stderr: ModuleNotFoundError: No module named 'kivy.uix.list'
+[WARNING] stderr: 
+[WARNING] stderr: During handling of the above exception, another exception occurred:
+[WARNING] stderr: 
+[WARNING] stderr: Traceback (most recent call last):
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/parser.py", line 556, in execute_directives
+[WARNING] stderr:     mod = importlib.__import__(module_name)
+[WARNING] stderr:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "<frozen importlib._bootstrap>", line 1283, in __import__
+[WARNING] stderr:   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+[WARNING] stderr:   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+[WARNING] stderr:   File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+[WARNING] stderr: ModuleNotFoundError: No module named 'kivy.uix.list'
+[WARNING] stderr: 
+[WARNING] stderr: During handling of the above exception, another exception occurred:
+[WARNING] stderr: 
+[WARNING] stderr: Traceback (most recent call last):
+[WARNING] stderr:   File "/storage/emulated/0/Download/WhatsAppClone/WhatsAppClone/main.py", line 517, in <module>
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/app.py", line 955, in run
+[WARNING] stderr:     self._run_prepare()
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/app.py", line 925, in _run_prepare
+[WARNING] stderr:     root = self.build()
+[WARNING] stderr:            ^^^^^^^^^^^^
+[WARNING] stderr:   File "/storage/emulated/0/Download/WhatsAppClone/WhatsAppClone/main.py", line 462, in build
+[WARNING] stderr:     print(args)
+[WARNING] stderr:            ^^^^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 372, in load_string
+[WARNING] stderr:     parser = Parser(content=string, filename=fn)
+[WARNING] stderr:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/parser.py", line 483, in __init__
+[WARNING] stderr:     self.parse(content)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/parser.py", line 590, in parse
+[WARNING] stderr:     self.execute_directives()
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/parser.py", line 565, in execute_directives
+[WARNING] stderr:     raise ParserException(self, ln,
+[WARNING] stderr: kivy.lang.parser.ParserException: Parser: File "<inline>", line 3:
+[WARNING] stderr: ...
+[WARNING] stderr:       1:
+[WARNING] stderr:       2:#: import Window kivy.core.window.Window
+[WARNING] stderr: >>    3:#: import IRightBodyTouch kivy.uix.list.IRightBodyTouch
+[WARNING] stderr:       4:#: import SliverTopAppBar __main__.SliverTopAppBar
+[WARNING] stderr:       5:<CustomImage@ButtonBehavior+FitImage>:
+[WARNING] stderr: ...
+[WARNING] stderr: Unable to import package 'kivy.uix.list.IRightBodyTouch'

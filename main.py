@@ -3,8 +3,11 @@ from kivymd.app import MDApp, App
 from kivymd.uix.screen import MDScreen
 from kivy.properties import ObjectProperty, ListProperty, StringProperty, BooleanProperty
 from kivymd.uix.relativelayout import MDRelativeLayout
+from kivymd.uix.boxlayout import MDBoxLayout
 from kivymd.uix.label import MDIcon
 from kivymd.uix.toolbar import MDTopAppBar
+from kivymd.uix.list import IRightBodyTouch
+from kivymd.uix.selectioncontrol import MDSwitch
 from kivymd.uix.sliverappbar import MDSliverAppbar
 from kivy.animation import Animation
 from kivy.metrics import dp
@@ -15,7 +18,13 @@ print(kivy.__version__)
 
 kv = '''
 #: import Window kivy.core.window.Window
+
 #: import SliverTopAppBar __main__.SliverTopAppBar
+<CustomImage@ButtonBehavior+FitImage>:
+
+<RightSwitch>:
+    
+    
 <CustomIcon>:
 <ChatItem>:
     size_hint_y:None
@@ -80,67 +89,191 @@ kv = '''
             text:root.text
             halign:'center'                                                       
 <UserInfoScreen>:
-    MDSliverAppbar:
-        background_color:app.theme_cls.primary_color
-        max_height:dp(400)
-        toolbar_cls:SliverTopAppBar()
-        on_scroll_content:root.on_scroll_content(*args)
-        MDSliverAppbarHeader:
-            MDRelativeLayout:
-                
-                size_hint_y:None
-                height:self.parent.height-dp(25)
-               
-                FitImage:
-                    id:avatar
-                    pos_hint:{'top':0.85, 'center_x':0.5}
-                    size_hint:(None,None)
-                    height:dp(100)
-                    width:dp(100)
-                    radius:self.width/2
-                    source:'img3.jpg'
-                
-                MDLabel:
-                    text:'username'
-                    font_size:dp(24)
-                    font_style:'Caption'
-                    bold:True
-                    halign:'center'
-                    pos_hint:{'top':1.05, 'center_x':0.5}
-                MDLabel:
-                    text:'(+254)797539873'
-                    font_size:dp(16)
-                    font_style:'Caption'
-                    bold:True
-                    halign:'center'
-                    pos_hint:{'top':1, 'center_x':0.5}
-                MDBoxLayout:
-                    pos_hint:{'top':0.4, 'center_x':0.5}
-                    spacing:dp(10)
-                    padding:[50, 50,0,50]
-                    size_hint_y:0.3
-                    CustomIconTextButton:
-                        icon:'message-outline'
-                        text:'message'
-                    CustomIconTextButton:
-                        icon:'phone-outline'
-                        text:'call'
-                    CustomIconTextButton:
-                        icon:'video-outline'
-                        text:'video'
-                    
-        MDSliverAppbarContent:
-            id:content
-            adaptive_height:True
-            padding:dp(12)
-            spacing:dp(12)
+    SliverTopAppBar:
+        pos_hint:{'top':1, }
+    MDScrollView:
+        pos_hint:{'top':0.93, }
+        #on_scroll_start:root.on_scroll_content(*args)
+        on_scroll_move:root.on_scroll_content(*args)
+        #on_scroll_stop:root.on_scroll_content(*args)
+        MDBoxLayout:
             orientation:'vertical'
-            ChatItem:
-                name:'Bernice'
-                messge:'Bernice is really trying to make it work'
-                avatar:'img10.jpg'
+            adaptive_height:True
+            spacing:dp(16)
+            padding:[0,0,0,0]
+            FitImage:
+                id:avatar
+                pos_hint:{ 'center_y':0.5, 'center_x':0.5}
+                size_hint:(None,None)
+                height:dp(150)
+                width:dp(150)
+                radius:self.width/2
+                source:'img3.jpg'
+            MDLabel:
+                text:'username'
+                font_size:dp(24)
+                size_hint_y:None
+                height:self.texture_size[1]
+                bold:True
+                halign:'center'
+                
+            MDLabel:
+                text:'(+1)12345678'
+                font_size:dp(16)
+                halign:'center'
+                bold:True
+                theme_text_color:'Custom'
+                text_color:[1,1,1,0.5]
+                
+            MDBoxLayout:
+                pos_hint:{'top':0.4, 'center_x':0.5}
+                spacing:dp(10)
+                padding:[50, 50,0,50]
+                size_hint_y:None
+                height:dp(150)
+                CustomIconTextButton:
+                    icon:'message-outline'
+                    text:'message'
+                CustomIconTextButton:
+                    icon:'phone-outline'
+                    text:'call'
+                CustomIconTextButton:
+                    icon:'video-outline'
+                    text:'video'
+            MDBoxLayout:
+                id:content
+                adaptive_height:True
+                padding:dp(12)
+                spacing:dp(12)
+                orientation:'vertical'
+                MDBoxLayout:
+                    md_bg_color:[0.1,0.1,0.1,1]
+                    size_hint_y:None
+                    height:self.children[0].height
+                    padding:[0,0,0,0]
+                    TwoLineListItem:
+                        text:'God is Gratefull'
+                        secondary_text:'7 November '
+                MDBoxLayout:
+                    orientation:'vertical'
+                    md_bg_color:[0.1,0.1,0.1,1]
+                    size_hint_y:None
+                    height:self.children[0].height + self.children[1].height
+                    padding:[0,0,0,0]
+                    OneLineIconListItem:
+                        text:'Notifications'
+                        IconLeftWidget:
+                            icon:'bell-outline'
+                    OneLineIconListItem:
+                        text:'Media'
+                        IconLeftWidget:
+                            icon:'image-outline'
+                MDBoxLayout:
+                    orientation:'vertical'
+                    md_bg_color:[0.1,0.1,0.1,1]
+                    size_hint_y:None
+                    height:self.children[0].height + self.children[1].height + self.children[2].height 
+                    padding:[0,0,0,0]
+                    TwoLineIconListItem:
+                        text:'Encryption'
+                        secondary_text:'Messages and calls are end-to-end encrypted. Tap to verify'
+                        IconLeftWidget:
+                            icon:'lock-outline'
+                    TwoLineIconListItem:
+                        text:'Disappearing message'
+                        secondary_text:'Off'
+                        IconLeftWidget:
+                            icon:'clock-outline'
+                    TwoLineAvatarIconListItem:
+                        text:'Chat Lock'
+                        secondary_text:'Lock and hide this chat on this device '
+                        IconLeftWidget:
+                            icon:'bell'
+                        RightSwitch:
+                MDBoxLayout:
+                    orientation:'vertical'
+                    md_bg_color:[0.1,0.1,0.1,1]
+                    size_hint_y:None
+                    height:self.children[1].height 
+                    padding:[0,0,0,0]
+                    MDLabel:
+                        text:'No groups in common'
+                        font_size:dp(9)
+                        size_hint_y:None
+                        height:self.texture_size[1]
+                    OneLineIconListItem:
+                        text:'Create Group with username'
+                        IconLeftWidget:
+                            icon:'group'
+                MDBoxLayout:
+                    orientation:'vertical'
+                    md_bg_color:[0.1,0.1,0.1,1]
+                    size_hint_y:None
+                    height:self.children[1].texture_size[1] + self.children[1].height 
+                    padding:[0,0,0,0]
+                    MDLabel:
+                        text:'Other phones'
+                        font_size:dp(9)
+                        size_hint_y:None
+                        height:self.texture_size[1]
+                    MDRelativeLayout:
+                        TwoLineListItem:
+                            pos_hint:{'left':1.2}
+                            text:'+254712345678'
+                            secondary_text:'Mobile'
+                        MDBoxLayout:
+                            pos_hint:{'center_x':0.8}
+                            spacing:dp(36)
+                            padding:[0,0,0,dp(25)]
+                            size_hint:(None,None)
+                            height:self.parent.children[0].height
+                            width:self.children[0].width+self.children[1].width+self.children[2].width
+                            MDIcon:
+                                theme_text_color:'Custom'
+                                text_color:app.theme_cls.primary_dark
+                                icon:'message-outline'
+                            MDIcon:
+                                theme_text_color:'Custom'
+                                text_color:app.theme_cls.primary_dark
+                                icon:'phone-outline'
+                            MDIcon:
+                                theme_text_color:'Custom'
+                                text_color:app.theme_cls.primary_dark
+                                icon:'video-outline'
+                MDBoxLayout:
+                    orientation:'vertical'
+                    md_bg_color:[0.1,0.1,0.1,1]
+                    size_hint_y:None
+                    height:self.children[0].height + self.children[1].height + self.children[2].height + self.children[3].height 
+                    padding:[0,0,0,0]
+                    OneLineIconListItem:
+                        text:'Add to favourite'
+                        IconLeftWidget:
+                            icon:'heart-outline'
+                    OneLineIconListItem:
+                        text:'Add to list'
+                        IconLeftWidget:
+                            icon:'bookmark-outline'
+                    OneLineIconListItem:
+                        text:'Block username'
+                        IconLeftWidget:
+                            icon:'circle-outline'
+                    OneLineIconListItem:
+                        text:'Report username'
+                        IconLeftWidget:
+                            icon:'thumb-down-outline'
+                MDBoxLayout:
+                    size_hint_y:None
+                    height:dp(100)
                     
-
+                            
+                    
+                
+                         
+                            
+                            
+                        
+                
 <StatusCard>:
     size_hint:(None,None)
     size:(250,450)
@@ -151,7 +284,8 @@ kv = '''
         FitImage:
             source:root.status_image
             radius:self.parent.radius
-    FitImage:
+            #on_release:app.change_screen(self)
+    CustomImage:
         canvas.after:
             Color:
                 rgba:(0,0.9, 0,1)
@@ -163,6 +297,7 @@ kv = '''
         size:(dp(40), dp(40))
         radius:self.width/2
         pos_hint:{'top':0.95,'center_x':0.20}
+        on_release:app.change_screen(self)
     
 <UpdatesScreen>:
     MDBoxLayout:
@@ -337,21 +472,30 @@ MDScreen:
                     
     
 '''
+class RightContainer(IRightBodyTouch,MDBoxLayout):
+    pass 
+    
+class RightSwitch(IRightBodyTouch, MDSwitch):
+    pass 
+    
 class UserInfoScreen(MDScreen):
-    def on_scroll_content(self, sliverappbar, value, direction):
-        anim = Animation(pos_hint={'top':1, 'center_x':0.1}, size=(dp(50),dp(50)))
-        print(value, direction)
-        if value < 0.92 and direction == 'up':
+    def on_scroll_content(self, instance, motion):
+        value = motion.psx-motion.osx
+        
+        #anim = Animation(pos_hint={'top':1*value, 'center_x':0.1*value}, size=(dp(50)*value,dp(50)*value))
+        
+        if value >= 0.1:
             print('making small')
-            anim = Animation(pos_hint={'top':1.2, 'center_x':0.1}, size=(dp(50),dp(50)))
+            anim = Animation(pos_hint={'top':0.9*1/value, 'center_x':0.1}, size=(dp(50),dp(50)))
             anim.start(self.ids.avatar)
-        elif value > 0.9 and direction == 'down':
+        elif value <= 0 :
             print('making big')
-            anim = Animation(pos_hint={'top':0.85, 'center_x':0.5}, size=(dp(100),dp(100)))
+            anim = Animation(pos_hint={'top':0.85, 'center_x':0.5}, size=(dp(150),dp(150)))
             anim.start(self.ids.avatar)
             
         #print(self.ids.avatar.pos_hint)
         
+        #print(motion.psx-motion.osx)
     
 class SliverTopAppBar(MDTopAppBar):
     def __init__(self, **kwargs):
@@ -361,11 +505,7 @@ class SliverTopAppBar(MDTopAppBar):
 
         self.right_action_items = [
 
-                ["attachment", lambda x: x],
-
-                ["calendar", lambda x: x],
-
-                ["dots-vertical", lambda x: x],
+                ["dots-vertical", lambda x: x]
 
                 ]
 
@@ -432,22 +572,21 @@ class WhatsApp(MDApp):
         for i in range(5):
             channel_box.add_widget(ChatItem(name='Channel', avatar=f'img{i}.jpg', message='This is nice'))
             
-        userinfocontent = self.root.ids.userinfoscreen.ids.content
-        for i in range(20):
-            userinfocontent.add_widget(ChatItem(
-                name='Bernice',
-                messge='Bernice is really trying to make it work',
-                avatar='img12.jpg'))
-            
+        
             
     def change_app_bar(self, instance_bottom_navigation, name_tab, name):
         
         self.root.ids.home.ids.app_bar.title ='WhatsApp' if name_tab.text == 'Chats' else name_tab.text
         self.root.ids.home.ids.app_bar.right_action_items =[['camera-outline', lambda x:x],['magnify',lambda x:x], ['dots-vertical', lambda x:x]]  if name_tab.text == 'Chats' else [ ['magnify',lambda x:x], ['dots-vertical', lambda x:x]]
     def change_screen(self, instance):
-        
-        self.root.ids.sm.current = 'userinfo'
-        self.root.ids.userinfoscreen.ids.avatar.source = instance.avatar
+        if hasattr(instance, 'avatar'):
+            self.root.ids.sm.current = 'userinfo'
+            self.root.ids.userinfoscreen.ids.avatar.source = instance.avatar
+            
+        elif hasattr(instance, 'source'):
+            self.root.ids.sm.current = 'userinfo'
+            self.root.ids.userinfoscreen.ids.avatar.source = instance.source
+            
     def change_back(self, instance):
          print(instance)
          self.root.ids.sm.current = 'home'

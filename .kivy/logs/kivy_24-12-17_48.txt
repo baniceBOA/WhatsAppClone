@@ -23,20 +23,24 @@
 [INFO   ] Window: virtual keyboard not allowed, single mode, not docked
 [INFO   ] Clipboard: Provider: android
 [INFO   ] GL: NPOT texture support is available
-[WARNING] Deprecated property "<StringProperty name=text>" of object "<kivymd.uix.chip.chip.MDChip object at 0x7b9c511710>" was accessed, it will be removed in a future version
-[WARNING] Deprecated property "<ColorProperty name=text_color>" of object "<kivymd.uix.chip.chip.MDChip object at 0x7b9c511710>" was accessed, it will be removed in a future version
+[WARNING] Deprecated property "<StringProperty name=text>" of object "<kivymd.uix.chip.chip.MDChip object at 0x7b9663eba0>" was accessed, it will be removed in a future version
+[WARNING] Deprecated property "<ColorProperty name=text_color>" of object "<kivymd.uix.chip.chip.MDChip object at 0x7b9663eba0>" was accessed, it will be removed in a future version
 [WARNING] stderr: Traceback (most recent call last):
-[WARNING] stderr:   File "/storage/emulated/0/Download/WhatsAppClone/WhatsAppClone/main.py", line 481, in <module>
-[WARNING] stderr:     
-[WARNING] stderr:     ^
+[WARNING] stderr:   File "kivy/properties.pyx", line 961, in kivy.properties.ObservableDict.__getattr__
+[WARNING] stderr: KeyError: '_right_container'
+[WARNING] stderr: 
+[WARNING] stderr: During handling of the above exception, another exception occurred:
+[WARNING] stderr: 
+[WARNING] stderr: Traceback (most recent call last):
+[WARNING] stderr:   File "/storage/emulated/0/Download/WhatsAppClone/WhatsAppClone/main.py", line 517, in <module>
 [WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/app.py", line 955, in run
 [WARNING] stderr:     self._run_prepare()
 [WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/app.py", line 925, in _run_prepare
 [WARNING] stderr:     root = self.build()
 [WARNING] stderr:            ^^^^^^^^^^^^
-[WARNING] stderr:   File "/storage/emulated/0/Download/WhatsAppClone/WhatsAppClone/main.py", line 425, in build
-[WARNING] stderr:     self.theme_cls.primary_palette = 'Green'
-[WARNING] stderr:            ^^^^^^^^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "/storage/emulated/0/Download/WhatsAppClone/WhatsAppClone/main.py", line 462, in build
+[WARNING] stderr:     print(args)
+[WARNING] stderr:            ^^^^^
 [WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 407, in load_string
 [WARNING] stderr:     self._apply_rule(
 [WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 662, in _apply_rule
@@ -53,13 +57,11 @@
 [WARNING] stderr:     self._apply_rule(
 [WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 662, in _apply_rule
 [WARNING] stderr:     self._apply_rule(
-[WARNING] stderr:   [Previous line repeated 1 more time]
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 620, in _apply_rule
-[WARNING] stderr:     cls = Factory_get(cname)
-[WARNING] stderr:           ^^^^^^^^^^^^^^^^^^
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/factory.py", line 169, in __getattr__
-[WARNING] stderr:     rootwidgets.append(Factory.get(basecls))
-[WARNING] stderr:                        ^^^^^^^^^^^^^^^^^^^^
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/factory.py", line 147, in __getattr__
-[WARNING] stderr:     raise FactoryException('Unknown class <%s>' % name)
-[WARNING] stderr: kivy.factory.FactoryException: Unknown class <ButtonBehaviour>
+[WARNING] stderr:   [Previous line repeated 2 more times]
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 659, in _apply_rule
+[WARNING] stderr:     widget.add_widget(child)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivymd/uix/list/list.py", line 1211, in add_widget
+[WARNING] stderr:     self.ids._right_container.add_widget(widget)
+[WARNING] stderr:     ^^^^^^^^^^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "kivy/properties.pyx", line 964, in kivy.properties.ObservableDict.__getattr__
+[WARNING] stderr: AttributeError: 'super' object has no attribute '__getattr__'. Did you mean: '__setattr__'?

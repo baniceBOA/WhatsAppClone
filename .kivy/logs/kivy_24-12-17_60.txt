@@ -23,106 +23,22 @@
 [INFO   ] Window: virtual keyboard not allowed, single mode, not docked
 [INFO   ] Clipboard: Provider: android
 [INFO   ] GL: NPOT texture support is available
-[WARNING] Deprecated property "<StringProperty name=text>" of object "<kivymd.uix.chip.chip.MDChip object at 0x7b8d711390>" was accessed, it will be removed in a future version
-[WARNING] Deprecated property "<ColorProperty name=text_color>" of object "<kivymd.uix.chip.chip.MDChip object at 0x7b8d711390>" was accessed, it will be removed in a future version
-[WARNING] stderr: Traceback (most recent call last):
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 240, in create_handler
-[WARNING] stderr:     return eval(value, idmap), bound_list
-[WARNING] stderr:            ^^^^^^^^^^^^^^^^^^
-[WARNING] stderr:   File "<string>", line 57, in <module>
-[WARNING] stderr: AttributeError: 'ObservableReferenceList' object has no attribute 'x'
-[WARNING] stderr: 
-[WARNING] stderr: During handling of the above exception, another exception occurred:
-[WARNING] stderr: 
-[WARNING] stderr: Traceback (most recent call last):
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 922, in _build_canvas
-[WARNING] stderr:     value, _ = create_handler(
-[WARNING] stderr:                ^^^^^^^^^^^^^^^
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 243, in create_handler
-[WARNING] stderr:     raise BuilderException(rule.ctx, rule.line,
-[WARNING] stderr: kivy.lang.builder.BuilderException: Parser: File "<inline>", line 57:
-[WARNING] stderr: ...
-[WARNING] stderr:      55:            Line:
-[WARNING] stderr:      56:                width:dp(1.5)
-[WARNING] stderr: >>   57:                ellipse:(self.pos.x, self.pos.y, self.width*1.5, self.height)
-[WARNING] stderr:      58:        MDIcon:
-[WARNING] stderr:      59:            icon:root.icon
-[WARNING] stderr: ...
-[WARNING] stderr: AttributeError: 'ObservableReferenceList' object has no attribute 'x'
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 240, in create_handler
-[WARNING] stderr:     return eval(value, idmap), bound_list
-[WARNING] stderr:            ^^^^^^^^^^^^^^^^^^
-[WARNING] stderr:   File "<string>", line 57, in <module>
-[WARNING] stderr: 
-[WARNING] stderr: 
-[WARNING] stderr: During handling of the above exception, another exception occurred:
-[WARNING] stderr: 
-[WARNING] stderr: Traceback (most recent call last):
-[WARNING] stderr:   File "/storage/emulated/0/Download/WhatsAppClone/WhatsAppClone/main.py", line 467, in <module>
-[WARNING] stderr:     self.root.ids.home.ids.app_bar.title ='WhatsApp' if name_tab.text == 'Chats' else name_tab.text
-[WARNING] stderr:     ^^^^^^^^^^^^^^^^
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/app.py", line 955, in run
-[WARNING] stderr:     self._run_prepare()
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/app.py", line 925, in _run_prepare
-[WARNING] stderr:     root = self.build()
-[WARNING] stderr:            ^^^^^^^^^^^^
-[WARNING] stderr:   File "/storage/emulated/0/Download/WhatsAppClone/WhatsAppClone/main.py", line 411, in build
-[WARNING] stderr:     class ChatItem(MDRelativeLayout):
-[WARNING] stderr:                    ^^^^^^^^^^^^^^^^^^^
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 407, in load_string
-[WARNING] stderr:     self._apply_rule(
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 662, in _apply_rule
-[WARNING] stderr:     self._apply_rule(
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 660, in _apply_rule
-[WARNING] stderr:     child.apply_class_lang_rules(
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/uix/widget.py", line 470, in apply_class_lang_rules
-[WARNING] stderr:     Builder.apply(
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 540, in apply
-[WARNING] stderr:     self._apply_rule(
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 662, in _apply_rule
-[WARNING] stderr:     self._apply_rule(
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 662, in _apply_rule
-[WARNING] stderr:     self._apply_rule(
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 662, in _apply_rule
-[WARNING] stderr:     self._apply_rule(
-[WARNING] stderr:   [Previous line repeated 1 more time]
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 660, in _apply_rule
-[WARNING] stderr:     child.apply_class_lang_rules(
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/uix/widget.py", line 470, in apply_class_lang_rules
-[WARNING] stderr:     Builder.apply(
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 540, in apply
-[WARNING] stderr:     self._apply_rule(
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 662, in _apply_rule
-[WARNING] stderr:     self._apply_rule(
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 603, in _apply_rule
-[WARNING] stderr:     self._build_canvas(widget.canvas.after, widget,
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 928, in _build_canvas
-[WARNING] stderr:     raise BuilderException(
-[WARNING] stderr: kivy.lang.builder.BuilderException: Parser: File "<inline>", line 57:
-[WARNING] stderr: ...
-[WARNING] stderr:      55:            Line:
-[WARNING] stderr:      56:                width:dp(1.5)
-[WARNING] stderr: >>   57:                ellipse:(self.pos.x, self.pos.y, self.width*1.5, self.height)
-[WARNING] stderr:      58:        MDIcon:
-[WARNING] stderr:      59:            icon:root.icon
-[WARNING] stderr: ...
-[WARNING] stderr: BuilderException: Parser: File "<inline>", line 57:
-[WARNING] stderr: ...
-[WARNING] stderr:      55:            Line:
-[WARNING] stderr:      56:                width:dp(1.5)
-[WARNING] stderr: >>   57:                ellipse:(self.pos.x, self.pos.y, self.width*1.5, self.height)
-[WARNING] stderr:      58:        MDIcon:
-[WARNING] stderr:      59:            icon:root.icon
-[WARNING] stderr: ...
-[WARNING] stderr: AttributeError: 'ObservableReferenceList' object has no attribute 'x'
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 240, in create_handler
-[WARNING] stderr:     return eval(value, idmap), bound_list
-[WARNING] stderr:            ^^^^^^^^^^^^^^^^^^
-[WARNING] stderr:   File "<string>", line 57, in <module>
-[WARNING] stderr: 
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 922, in _build_canvas
-[WARNING] stderr:     value, _ = create_handler(
-[WARNING] stderr:                ^^^^^^^^^^^^^^^
-[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/lang/builder.py", line 243, in create_handler
-[WARNING] stderr:     raise BuilderException(rule.ctx, rule.line,
-[WARNING] stderr: 
+[WARNING] Deprecated property "<StringProperty name=text>" of object "<kivymd.uix.chip.chip.MDChip object at 0x7ba34f3e70>" was accessed, it will be removed in a future version
+[WARNING] Deprecated property "<ColorProperty name=text_color>" of object "<kivymd.uix.chip.chip.MDChip object at 0x7ba34f3e70>" was accessed, it will be removed in a future version
+[WARNING] Base: Unknown <android> provider
+[INFO   ] Base: Start application main loop
+[WARNING] Deprecated property "<NumericProperty name=width_mult>" of object "<kivymd.uix.toolbar.toolbar.OverFlowMenu object at 0x7ba0ade0b0>" has been set, it will be removed in a future version
+[INFO   ] Loader: using a thread pool of 2 workers
+[ERROR  ] AsyncImage: Not found <img0.jpg>
+[ERROR  ] AsyncImage: Not found <img4.jpg>
+[ERROR  ] AsyncImage: Not found <img9.jpg>
+[ERROR  ] AsyncImage: Not found <img0.jpg>
+[ERROR  ] AsyncImage: Not found <img0.jpg>
+[ERROR  ] AsyncImage: Not found <img4.jpg>
+[ERROR  ] AsyncImage: Not found <img4.jpg>
+[ERROR  ] AsyncImage: Not found <img9.jpg>
+[ERROR  ] AsyncImage: Not found <img9.jpg>
+[ERROR  ] AsyncImage: Not found <img0.jpg>
+[ERROR  ] AsyncImage: Not found <img4.jpg>
+[ERROR  ] AsyncImage: Not found <img4.jpg>
+[INFO   ] Base: Leaving application in progress...
